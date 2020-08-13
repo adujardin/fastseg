@@ -216,7 +216,13 @@ optional arguments:
                         pretrained by default)
 ```
 
-The `onnx_optimize.py` script optimizes exported models. If you're looking to deploy a model to TensorRT or a mobile device, you might also want to run it through [onnx-simplifier](https://github.com/daquexian/onnx-simplifier).
+The `onnx_optimize.py` script optimizes exported models. If you're looking to deploy a model to TensorRT or a mobile device, you might also want to run it through [onnx-simplifier](https://github.com/daquexian/onnx-simplifier), like this:
+
+```
+$ python -m pip install onnx-simplifier
+$ python -m onnxsim MobileV3Small_optimized.onnx MobileV3Small_simplified.onnx
+```
+
 
 ## Training from Scratch
 
